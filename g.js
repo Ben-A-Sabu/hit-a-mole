@@ -29,6 +29,13 @@ function randomSquare() {
 
 
     let randomsqr = sqr[Math.floor(Math.random() * 9)]
+
+    /// add transition to the mole
+    randomsqr.classList.add("mole");
+    img.style.animation = 'jump 0.5s ease'
+
+
+
     randomsqr.appendChild(img);
     //   randomsqr.innerHTML+='<img src="'+img.src+'" />'
     lasthole = randomsqr;
@@ -79,8 +86,17 @@ function countDopwn() {
         document.getElementById("GameOver_popup").style.display = "flex";
         document.getElementById("game_Result").innerHTML = "game over your final score is " + result;
 
+        document.getElementById("yes").addEventListener("click", function () {
+            location.reload();
+        });
+
+        document.getElementById("no").addEventListener("click", function () {
+            document.getElementById("GameOver_popup").style.display = "none";
+        });
 
     }
+
+
 
 
 }
