@@ -8,6 +8,13 @@
 
 body {
    background: #181818;
+   overscroll-behavior: none;
+
+}
+
+::-webkit-scrollbar {
+   width: 0px;
+
 }
 
 #menubar {
@@ -29,14 +36,15 @@ body {
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
+   font-size: clamp(10px, 2vw, 20px);
 
 }
 
 #content {
-   width: 60vh;
-   height: 60vh;
-   margin-left: auto;
-   margin-right: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
 .grid {
@@ -44,15 +52,24 @@ body {
    height: 60vh;
    display: flex;
    flex-wrap: wrap;
-
-
    background-image: url("b1.jpg");
    background-size: contain;
    object-fit: contain;
    background-repeat: repeat;
    border-radius: 20px;
+
 }
 
+.grid {
+   /* your existing grid styles */
+   cursor: pointer;
+   /* set the default cursor to the hammer image */
+}
+
+.grid:hover {
+   cursor: url("hammer.png"), auto;
+   /* change the cursor to the hammer image on hover */
+}
 
 
 .square {
@@ -115,45 +132,122 @@ body {
    color: rgb(4, 249, 61);
 }
 
-.mole {
 
-   width: 20vh;
-   height: 20vh;
-   background-size: contain;
-   object-fit: contain;
-   background-repeat: no-repeat;
-   border-radius: 50%;
-   cursor: pointer;
-   z-index: 1;
-
-}
 
 @keyframes jump {
    0% {
-      bottom: 0;
-   }
-
-   25% {
-      bottom: 75px;
-      transform: translateY(-25px);
+      margin-top: 10vh;
+      opacity: 0;
    }
 
    50% {
-      bottom: 150px;
-      transform: translateY(-50px);
-   }
-
-   75% {
-      bottom: 75px;
-      transform: translateY(-25px);
+      margin-top: 5vh;
+      opacity: 1;
    }
 
    100% {
-      bottom: 0;
-      transform: translateY(0);
+      margin-top: 10vh;
+      opacity: 0;
    }
 }
 
-.mole.jump {
-   animation: jump 0.5s linear;
+
+
+
+
+.button {
+   font-size: clamp(1rem, 5vw, 2rem);
+   font-weight: 200;
+   height: clamp(40px, 10vw, 80px);
+   width: clamp(100px, 30vw, 130px);
+   border-radius: 5px;
+   box-shadow: #8fd49f 3px 3px 3px;
+   padding: 13px 5px 13px;
+   border: 1px solid rgb(111, 194, 144);
+   cursor: pointer;
+   background-color: rgba(22, 158, 119, 0.869);
+
+}
+
+.button:hover {
+   background-color: rgba(198, 226, 218, 0.869);
+   transition: all 0.2s ease-in-out;
+}
+
+
+
+#controlbtn {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+   padding: 10px;
+}
+
+.grid img {
+   width: 10vh;
+   height: 10vh;
+   margin-left: 5vh;
+   margin-top: 15vh;
+}
+
+@media screen and (max-width: 600px) {
+   .grid {
+      width: 90vw;
+      height: 90vw;
+   }
+
+   .square {
+      height: 30vw;
+      width: 30vw;
+   }
+
+   .grid img {
+      width: 15vw;
+      height: 15vw;
+      margin-left: 7.5vw;
+      margin-top: 30vw;
+   }
+
+   #GameOver_popup {
+      margin: 10%;
+      padding: 10%;
+   }
+
+   #popupbtn {
+      flex-direction: column;
+   }
+
+   #popupbtn button {
+      margin: 5%;
+   }
+
+   #controlbtn {
+      flex-direction: row;
+      font-size: clamp(10px, 2vw, 20px);
+
+   }
+
+   #controlbtn button {
+      margin: 5%;
+   }
+
+   @keyframes jump {
+      0% {
+         margin-top: 20vw;
+         opacity: 0;
+      }
+
+      50% {
+         margin-top: 9vw;
+         opacity: 1;
+      }
+
+      100% {
+         margin-top: 20vw;
+         opacity: 0;
+      }
+   }
+
 }
