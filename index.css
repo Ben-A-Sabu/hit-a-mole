@@ -1,6 +1,11 @@
+:root {
+   --bordrad: 10px;
+}
+
 * {
    margin: 0;
    padding: 0;
+   text-align: center;
    box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
    color: aliceblue;
@@ -9,50 +14,92 @@
 body {
    background: #181818;
    overscroll-behavior: none;
+   user-select: none;
+   height: 100vh;
 }
 
-::-webkit-scrollbar {
-   width: 0px;
-
+.row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
 }
 
-#game_over_nme {
-   font-size: clamp(20px, 4vw, 40px);
-   font-weight: 600;
-   color: rgb(4, 249, 61);
+.col {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.button {
+   height: clamp(30px, 10vh, 70px);
+   width: clamp(40px, 30vh, 150px);
+   background-color: rgba(22, 158, 119, 0.869);
+   font-weight: 200;
+   box-shadow: #8fd49f 3px 3px 3px;
+   border: 1px solid rgb(111, 194, 144);
+   background-color: rgba(22, 158, 119, 0.869);
+   font-size: clamp(1.5rem, 5vw, 2rem);
+   cursor: pointer;
+   line-height: clamp(30px, 10vh, 60px);
+   padding: 1px;
+   border-radius: var(--bordrad);
+}
+
+.button:hover {
+   background-color: rgba(198, 226, 218, 0.869);
+   transition: all 0.2s ease-in-out;
 }
 
 #menubar {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   padding-left: 5vw;
-   padding-right: 5vw;
-   height: 20vh;
+   height: 10vh;
+   width: 90vw;
+}
 
+#gamearea {
+   height: 60vh;
+   width: 90vw;
+}
+
+#GameOver_popup {
+   height: fit-content;
+   width: clamp(300px, 80vw, 500px);
+   color: rgb(248, 248, 248);
+   background-color: rgb(34, 12, 12);
+   z-index: 10;
+   border-radius: var(--bordrad);
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   padding: 20px;
+}
+
+#content {
+   justify-content: center;
+   border-radius: var(--bordrad);
+}
+
+#controlbtn {
+   width: 80vw;
+   height: 10vh;
+}
+
+#comentaryarea {
+   height: 10vh;
+   width: 90vw;
 }
 
 #timebar,
 #scorebar,
-#comentaryarea {
-   background-color: rgb(104, 107, 104);
-   border-radius: 10px;
+#highscorebar {
    padding: 1vh;
+   background-color: rgb(104, 107, 104);
+   border-radius: var(--bordrad);
+   font-size: clamp(10px, 2vw, 20px);
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   font-size: clamp(10px, 2vw, 20px);
-
-}
-
-#content {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-
 }
 
 .grid {
@@ -64,57 +111,21 @@ body {
    background-size: contain;
    object-fit: contain;
    background-repeat: repeat;
-   border-radius: 20px;
+   border-radius: var(--bordrad);
    cursor: url('images/hammer1.webp'), pointer;
 }
 
-
-
+.grid img {
+   width: 10vh;
+   height: 10vh;
+   margin-left: 5vh;
+   margin-top: 15vh;
+}
 
 .square {
    height: 20vh;
    width: 20vh;
 }
-
-#GameOver_popup {
-   color: rgb(11, 11, 11);
-   background-color: rgb(248, 246, 246);
-   z-index: 10;
-   border-radius: 5px;
-   display: none;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-around;
-   margin: 5%;
-   padding: 5%;
-
-}
-
-#popupbtn {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-}
-
-#GameOver_popup button {
-   width: clamp(100px, 20vh, 200px);
-   height: clamp(30px, 5vh, 50px);
-   border: 1px solid rgb(111, 194, 144);
-   color: rgb(247, 246, 246);
-   font-size: clamp(1rem, 5vw, 2rem);
-   border-radius: 3px;
-   cursor: pointer;
-   margin: 5%;
-   background-color: rgba(22, 158, 119, 0.869);
-   box-shadow: #8fd49f 3px 3px 3px;
-}
-
-#GameOver_popup button:hover {
-   background-color: rgba(198, 226, 218, 0.869);
-   transition: all 0.2s ease-in-out;
-}
-
 
 #game_Result {
    font-size: clamp(20px, 4vw, 40px);
@@ -128,75 +139,14 @@ body {
    color: rgb(4, 249, 61);
 }
 
-
-
-@keyframes jump {
-   0% {
-      margin-top: 4vh;
-      display: none;
-      opacity: 0;
-   }
-
-   50% {
-      margin-top: 3vh;
-      opacity: 1;
-   }
-
-   100% {
-      margin-top: 4vh;
-      display: none;
-      opacity: 0;
-   }
+#popupbtn {
+   width: 100%;
 }
-
-
-
-
-.button {
-   font-size: clamp(1rem, 5vw, 2rem);
-   font-weight: 200;
-   height: clamp(40px, 10vw, 60px);
-   width: clamp(100px, 30vw, 130px);
-   border-radius: 5px;
-   box-shadow: #8fd49f 3px 3px 3px;
-   padding: 13px 5px 13px;
-   border: 1px solid rgb(111, 194, 144);
-   cursor: pointer;
-   background-color: rgba(22, 158, 119, 0.869);
-
-}
-
-.button:hover {
-   background-color: rgba(198, 226, 218, 0.869);
-   transition: all 0.2s ease-in-out;
-}
-
-
-
-#controlbtn,
-#musiccontrolbtn {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   align-items: center;
-   text-align: center;
-   padding: 10px;
-}
-
 
 #playMusic,
 #pauseMusic {
-
-   height: clamp(20px, 10vw, 40px);
-   width: clamp(20px, 10vw, 40px);
-
-}
-
-.grid img {
-   width: 10vh;
-   height: 10vh;
-   margin-left: 5vh;
-   margin-top: 15vh;
+   height: clamp(10px, 8vh, 40px);
+   width: clamp(10px, 8vh, 40px);
 }
 
 @media screen and (max-width: 600px) {
@@ -217,55 +167,42 @@ body {
       margin-top: 30vw;
    }
 
-   #GameOver_popup {
-      margin: 10%;
-      padding: 10%;
-   }
-
-   #popupbtn {
-      flex-direction: column;
-   }
-
-   #popupbtn button {
-      margin: 5%;
-   }
-
-   #controlbtn {
-      flex-direction: row;
-      font-size: clamp(10px, 2vw, 20px);
-      padding: 10px;
-
-   }
-
-   #playMusic,
-   #pauseMusic {
-      height: clamp(15px, 5vw, 30px);
-      width: clamp(15px, 5vw, 30px);
+   .button {
+      height: clamp(40px, 10vh, 30px);
+      width: clamp(40px, 30vh, 80px);
+      line-height: clamp(40px, 10vh, 30px);
    }
 
    @keyframes jump {
       0% {
          margin-top: 7vw;
-         opacity: 0;
       }
 
       50% {
          margin-top: 6vw;
-         opacity: 1;
       }
 
       100% {
          margin-top: 7vw;
-         opacity: 0;
       }
+   }
+}
 
+@keyframes jump {
+   0% {
+      margin-top: 4vh;
+      display: none;
+      opacity: 0;
    }
 
-
-   #timebar,
-   #scorebar,
-   #comentaryarea {
-      font-size: clamp(5px, 2vw, 10px);
+   50% {
+      margin-top: 3vh;
+      opacity: 1;
    }
 
+   100% {
+      margin-top: 4vh;
+      display: none;
+      opacity: 0;
+   }
 }
