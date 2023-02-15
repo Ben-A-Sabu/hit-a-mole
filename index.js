@@ -89,7 +89,7 @@ function countDopwn() {
         clearInterval(countdownTimerId)
         clearInterval(timer)
         document.getElementById("GameOver_popup").style.display = "flex";
-        document.getElementById("game_Result").innerHTML = "game over your final score is " + result;
+        document.getElementById("game_Result").innerHTML = " Your final score is " + result;
         document.getElementById("content").style.display = "none";
         document.getElementById("pause").style.display = "none";
         document.getElementById("yes").addEventListener("click", function () {

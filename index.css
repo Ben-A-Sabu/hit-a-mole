@@ -16,6 +16,12 @@ body {
 
 }
 
+#game_over_nme {
+   font-size: clamp(20px, 4vw, 40px);
+   font-weight: 600;
+   color: rgb(4, 249, 61);
+}
+
 #menubar {
    display: flex;
    flex-direction: row;
