@@ -118,7 +118,6 @@ body {
 .grid img {
    width: 10vh;
    height: 10vh;
-   margin-left: 5vh;
    margin-top: 15vh;
 }
 
@@ -150,6 +149,10 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+   body {
+      height: 85vh;
+   }
+
    .grid {
       width: 90vw;
       height: 90vw;
@@ -163,7 +166,6 @@ body {
    .grid img {
       width: 15vw;
       height: 15vw;
-      margin-left: 7.5vw;
       margin-top: 30vw;
    }
 
