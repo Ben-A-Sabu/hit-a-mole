@@ -31,8 +31,16 @@ We are open to contributions. To contribute, follow these steps:
 
 For more information, please contact me at `benasabu74@gmail.com`.
 
+
 ## Screenshots
 
-| ![Screenshot 1](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/d64d7403-a01a-4d16-857a-66e11432d3a6) | ![Screenshot 2](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/dd0ddcb3-8ea7-4516-80a5-7d4c68a55bea) | ![Screenshot 3](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/fedd6bd3-9974-4292-a285-e79f7c175684) |
-|:---:|:---:|:---:|
-| Screenshot 1 | Screenshot 2 | Screenshot 3 |
+| ![Screenshot 1](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/a9f6dcbd-5d34-4744-b1d7-9f8d4e8cf34e) | ![Screenshot 2](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/d14a2a39-47ef-4269-b201-4f66cf3f35a5) |
+|:---:|:---:|
+| Screenshot 1 | Screenshot 2 |
+
+![Screenshot 3](https://github.com/Bran-Asabu/hit-a-mole/assets/88230486/b4b4ba9b-3aa4-40fc-8402-7c6b9af935a1)
+<p align="center">Screenshot 3</p>
+
+
+
+
