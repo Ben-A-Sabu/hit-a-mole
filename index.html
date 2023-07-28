@@ -4,58 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/hit-the-mole.webp" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body class="col">
-   <div id="menubar" class="row">
-    <div id="timebar">
-      <h2>Time:</h2>
-      <h2 id="timeLeft">60</h2>
-    </div>
-    <div id="highscorebar" class="row">
-      <h2>highscore :</h2>
-      <h2 id="highscore"> 0</h2>
-  </div>
-
-    <div id="scorebar">
-      <h2>Score :</h2>
-      <h2 id="score">0</h2>
-   </div>
-   </div>
-   <div id="comentaryarea" class="row">
-    <h2 id="comment"></h2>
-   </div>
-   <div id="gamearea" class="col">
-   <div id="GameOver_popup" >
-    <h2 id="game_over_nme">Game Over</h2>
-    <div id="game_Result">
-    </div>
-    <div id="popupbtn" class="row">
-    <div class="button" id="yes">Yes</div>
-    <div class="button" id="no">No</div>
-  </div>
-  </div>
-    <div id="content" class="col">
-      <div class="grid" id="gridboxes">
-        <div class="square" id="1"></div>
-        <div class="square" id="2"></div>
-        <div class="square" id="3"></div>
-        <div class="square" id="4"></div>
-        <div class="square" id="5"></div>
-        <div class="square" id="6"></div>
-        <div class="square" id="7"></div>
-        <div class="square" id="8"></div>
-        <div class="square" id="9"></div>
+    <div id="menubar" class="row">
+      <div id="timebar">
+        <h2>Time:</h2>
+        <h2 id="timeLeft">60</h2>
       </div>
-   </div>
-  </div>
-      <div id="controlbtn" class="row">
-      <div class="button" id="resume" style="display: none;">Resume</div>
+      <div id="highscorebar" class="row">
+        <h2>highscore :</h2>
+        <h2 id="highscore">0</h2>
+      </div>
+
+      <div id="scorebar">
+        <h2>Score :</h2>
+        <h2 id="score">0</h2>
+      </div>
+    </div>
+    <div id="comentaryarea" class="row">
+      <h2 id="comment"></h2>
+    </div>
+    <div id="gamearea" class="col">
+      <div id="GameOver_popup">
+        <h2 id="game_over_nme">Game Over</h2>
+        <div id="game_Result"></div>
+        <div id="popupbtn" class="row">
+          <div class="button" id="yes">Yes</div>
+          <div class="button" id="no">No</div>
+        </div>
+      </div>
+      <div id="content" class="col">
+        <div class="grid" id="gridboxes">
+          <div class="square" id="1"></div>
+          <div class="square" id="2"></div>
+          <div class="square" id="3"></div>
+          <div class="square" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square" id="6"></div>
+          <div class="square" id="7"></div>
+          <div class="square" id="8"></div>
+          <div class="square" id="9"></div>
+        </div>
+      </div>
+    </div>
+    <div id="controlbtn" class="row">
+      <div class="button" id="resume" style="display: none">Resume</div>
       <div class="button" id="pause">Pause</div>
       <div class="button" id="restart">Restart</div>
-      <div class="button"  id="pause_music_con"><img src="images/pause_music.webp" alt="pause"  id="playMusic" ></div>
-      <div class="button" style="display: none" id="play_music_con"><img src="images/play_music.webp"   alt="play"   id="pauseMusic"></div>
+      <div class="button" id="pause_music_con">
+        <img src="images/pause_music.webp" alt="pause" id="playMusic" />
+      </div>
+      <div class="button" style="display: none" id="play_music_con">
+        <img src="images/play_music.webp" alt="play" id="pauseMusic" />
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
