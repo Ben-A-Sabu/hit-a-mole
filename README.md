@@ -34,12 +34,10 @@ For more information, please contact me at `benasabu74@gmail.com`.
 
 ## Screenshots
 
-| ![Screenshot 1](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/a9f6dcbd-5d34-4744-b1d7-9f8d4e8cf34e) | ![Screenshot 2](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/d14a2a39-47ef-4269-b201-4f66cf3f35a5) |
-|:---:|:---:|
-| Screenshot 1 | Screenshot 2 |
 
-![Screenshot 3](https://github.com/Bran-Asabu/hit-a-mole/assets/88230486/b4b4ba9b-3aa4-40fc-8402-7c6b9af935a1)
-<p align="center">Screenshot 3</p>
+| ![Screenshot 1](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/a9f6dcbd-5d34-4744-b1d7-9f8d4e8cf34e) | ![Screenshot 2](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/d14a2a39-47ef-4269-b201-4f66cf3f35a5) | ![Screenshot 3](https://github.com/Ben-A-Sabu/hit-a-mole/assets/88230486/b4b4ba9b-3aa4-40fc-8402-7c6b9af935a1) |
+|:---:|:---:|:---:|
+| Screenshot 1 | Screenshot 2 | Screenshot 3 |
 
 
 
